@@ -6,8 +6,11 @@
     <title>email</title>
 </head>
 <body>
-    <label for="mail">Enter email address</label></br>
-    <input type="email" required></br>
-    <a href="{% url 'hello' %}"><input type="submit"></a>
+    <form action="{% url 'hello' %}">
+        {% csrf_token %}
+    <label for="mail">Enter email address</label></br></br>
+    <input type="email" required ></br></br>
+    <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
